@@ -1,0 +1,30 @@
+<div class="mxy-20">
+<div class="row mab-5">
+  <div class="col-md-10">
+<p class="text-success text-center">{{successMsg}}</p>
+  </div>
+  <div class="col-md-2">
+    <button type="submit" class="btn btn-primary float-right" (click)="AddPopup()">Add</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+       <th *ngFor="let head of headerElements" scope="col" class="text-center">{{head}} </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let el of listresData">
+      <th scope="row" class="text-center">{{el.id}}</th>
+      <td class="text-center">{{el.first_name}}</td>
+      <td class="text-center"> {{el.last_name}}</td>
+      <td class="text-center">{{el.email}}</td>
+      <td class="text-center"><button type="submit" class="btn btn-secondary" (click)="update(el.first_name)">Update</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>

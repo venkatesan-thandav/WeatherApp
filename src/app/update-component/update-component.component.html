@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Update</h1>
+<form [formGroup]="updateForm " (ngSubmit)="update()">
+
+<div mat-dialog-content>
+  <div class="row">
+    <div class="col-md-6">
+  <mat-form-field>
+
+    <input matInput  formControlName="name"  placeholder="name">
+  </mat-form-field>
+  </div>
+  <div class="col-md-6">
+    <mat-form-field>
+      <input matInput  formControlName="job" placeholder="job" >
+    </mat-form-field>
+    </div>
+  </div>
+
+</div>
+<div mat-dialog-actions>
+  <button class="btn btn-secondary float-right mar-r-5" (click)="close()">Cancel</button>
+  <button class="btn btn-primary float-right mar-r-5" [disabled]="!updateForm.valid">Submit</button>
+  <span class="text-danger">{{errorMsg}}</span>
+</div>
+</form>

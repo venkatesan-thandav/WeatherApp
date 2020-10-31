@@ -1,0 +1,17 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+.mxy-20{
+margin:20px;
+}
+
+.mab-5{
+  margin-bottom: 5px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mar-r-5{
+  margin-right: 5px;
+}
