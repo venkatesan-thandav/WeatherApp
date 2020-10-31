@@ -1,7 +1,11 @@
 // import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Component } from "@angular/core";
-import { ApiServiceService } from 'src/app/api-service.service';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { ApiServiceService } from "./api-service.service";
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA
+} from "@angular/material";
 import { AddComponentComponent } from './add-component/add-component.component';
 import { UpdateComponentComponent } from './update-component/update-component.component';
 
