@@ -1,7 +1,7 @@
 // import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Component } from "@angular/core";
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { forkJoin } from 'rxjs';
 import { AddCityComponent } from './add-city/add-city.component';
@@ -54,15 +54,14 @@ weatherreport(){
       console.log(element)
       this.serviceCall.getUserList(element).subscribe((data:any)=>{
         this.wheatherRes[index]=data;
+        index++;
+
       });
 
-index++;
     });
+    console.log(this.wheatherRes)
 }
-  wetherresponse(): Observable<any[]>{
-    
-    
-  }
+
 }
 
 
