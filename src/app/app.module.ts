@@ -5,15 +5,15 @@ import {  FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AddComponentComponent } from './add-component/add-component.component';
-import { MatDialogModule, MatInputModule } from '@angular/material';
-import { UpdateComponentComponent } from './update-component/update-component.component';
+import { AddCityComponent } from './add-city/add-city.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddComponentComponent,
-    UpdateComponentComponent
+    AddCityComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,13 +22,12 @@ import { UpdateComponentComponent } from './update-component/update-component.co
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatDialogModule,
-    MatInputModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 
-  entryComponents:[AddComponentComponent,UpdateComponentComponent],
+  entryComponents:[AddCityComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 
 })

@@ -6,21 +6,21 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiServiceService {
   configUrl:any;
-
+apiKey
   constructor(public http:HttpClient) { }
-getUserList(){
-return this.callServiceget('api/users');
+getUserList(data){
+return this.callServiceget(data);
 }
-  callServicePost(urlCall,data){
+  callServicePost(data){
     this.configUrl='';
-    this.configUrl='https://reqres.in/'+urlCall;
+    this.configUrl='http://api.openweathermap.org/data/2.5/weather';
    return  this.http.post(this.configUrl,data,{ observe: 'response' });
 
   }
-  callServiceget(urlCall){
-    this.configUrl='';
-    this.configUrl='https://reqres.in/'+urlCall;
-   return  this.http.get(this.configUrl);
+  callServiceget(loc){
+    
+    let apiKey: any='fb45d52f094925f13565d818416e18fe'
+    return this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${apiKey}`);
 
   }
 }
