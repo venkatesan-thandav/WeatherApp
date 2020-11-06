@@ -5,16 +5,19 @@
     </div>
 
   </div>
+  
   <div class="row">
     
-    <div *ngFor="let item of wheatherRes; let i = index;" class="col-md-3">
+    <div *ngFor="let item of wheatherRes; let i = index;" class="col-md-3 mxy-5">
       <div class="card text-center">
         <div class="card-header">
-
+{{this.cityList[i]}}
         </div>
         <div class="card-body">
 
-          <a href="#" (click)="addCity(i)" class="btn btn-primary">Add City</a>
+          <a href="#" *ngIf="!this.cityList[i]"  (click)="addCity(i)" class="btn btn-primary">Add City</a>
+          
+          <p *ngIf="this.cityList[i]">{{item.weather[0].main}}</p>
         </div>
 
       </div>
